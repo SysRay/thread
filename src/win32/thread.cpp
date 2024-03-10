@@ -779,7 +779,7 @@ namespace boost
             {
                 if(handle_count)
                 {
-                    unsigned long const notified_index=winapi::WaitForMultipleObjectsEx(handle_count,handles,false,static_cast<DWORD>(time_left_msec), 0);
+                    unsigned long const notified_index=winapi::WaitForMultipleObjectsEx(handle_count,handles,false,static_cast<DWORD>(time_left_msec), TRUE);
                     if(notified_index<handle_count)
                     {
                         if(notified_index==wait_handle_index)
